@@ -20,6 +20,11 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="logo.png">
 
+  <!-- Hreflang for multi-language SEO -->
+  <link rel="alternate" hreflang="tr" href="https://farukpatir.com/" />
+  <link rel="alternate" hreflang="en" href="https://farukpatir.com/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://farukpatir.com/" />
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -175,6 +180,38 @@
     .nav-cta:hover {
       transform: translateY(-2px);
       box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+    }
+
+    /* Language Switcher */
+    .lang-switcher {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-left: 16px;
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .lang-btn:hover {
+      border-color: var(--accent-blue);
+      color: var(--text-primary);
+    }
+
+    .lang-btn.active {
+      background: var(--accent-blue);
+      border-color: var(--accent-blue);
+      color: white;
     }
 
     /* Mobile Menu */
@@ -854,6 +891,9 @@
     <a href="#projeler" onclick="closeMobileMenu()">Projeler</a>
     <a href="#blog" onclick="closeMobileMenu()">Blog</a>
     <a href="#iletisim" onclick="closeMobileMenu()">İletişim</a>
+    <div style="margin-top: 20px;">
+      <a href="en/" class="lang-btn">🇬🇧 English</a>
+    </div>
   </div>
 
   <!-- Navigation -->
@@ -870,6 +910,10 @@
         <li><a href="#iletisim">İletişim</a></li>
       </ul>
       <a href="#iletisim" class="nav-cta">İletişime Geç</a>
+      <div class="lang-switcher">
+        <span class="lang-btn active">TR</span>
+        <a href="en/" class="lang-btn">EN</a>
+      </div>
       <button class="mobile-menu-btn" id="mobileMenuBtn" onclick="toggleMobileMenu()">☰</button>
     </div>
   </nav>

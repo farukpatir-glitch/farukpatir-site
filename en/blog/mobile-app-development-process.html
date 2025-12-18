@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mobile App Development Process: KelimEZ Experience | Faruk PATIR</title>
+  <meta name="description" content="My journey developing the KelimEZ mobile app from scratch. Building apps with Flutter, publishing to App Store and Google Play." />
+  <meta name="keywords" content="mobile app development, flutter, kelimez, app store, google play, cross-platform" />
+  <meta name="author" content="Faruk Patır" />
+  <link rel="canonical" href="https://farukpatir.com/en/blog/mobile-app-development-process.html" />
+  <link rel="alternate" hreflang="tr" href="https://farukpatir.com/blog/mobil-uygulama-gelistirme-sureci.html" />
+  <link rel="alternate" hreflang="en" href="https://farukpatir.com/en/blog/mobile-app-development-process.html" />
+  <meta property="og:title" content="Mobile App Development Process: KelimEZ Experience" />
+  <meta property="og:type" content="article" />
+  <link rel="icon" type="image/png" href="../../logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"Mobile App Development Process: KelimEZ Experience","author":{"@type":"Person","name":"Faruk Patır"},"datePublished":"2024-12-18"}
+  </script>
+  <style>
+    :root{--bg-primary:#000;--bg-card:rgba(255,255,255,0.02);--border-color:rgba(255,255,255,0.1);--text-primary:#fff;--text-secondary:rgba(255,255,255,0.7);--text-muted:rgba(255,255,255,0.5);--accent-blue:#3b82f6}*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:var(--bg-primary);color:var(--text-primary);line-height:1.6}.edge-glow{position:fixed;pointer-events:none;z-index:0}.edge-glow-left{top:0;left:0;width:120px;height:100%;background:linear-gradient(to right,rgba(59,130,246,0.4),transparent);animation:pulseGlow 5s ease-in-out infinite}.edge-glow-right{top:0;right:0;width:120px;height:100%;background:linear-gradient(to left,rgba(59,130,246,0.4),transparent);animation:pulseGlow 5s ease-in-out infinite}@keyframes pulseGlow{0%,100%{opacity:0.4}50%{opacity:1}}.container{max-width:800px;margin:0 auto;padding:0 24px}nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:16px 0;background:rgba(0,0,0,0.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--border-color)}.nav-container{max-width:1100px;margin:0 auto;padding:0 24px}.nav-content{display:flex;justify-content:space-between;align-items:center}.logo{text-decoration:none}.logo img{height:48px}.nav-links{display:flex;gap:40px;list-style:none}.nav-links a{color:var(--text-muted);text-decoration:none;font-size:14px}.nav-links a:hover,.nav-links a.active{color:var(--text-primary)}.nav-cta{background:var(--text-primary);color:var(--bg-primary);padding:10px 24px;border-radius:6px;text-decoration:none;font-size:14px;font-weight:600}.lang-switcher{display:flex;gap:8px;margin-left:16px}.lang-btn{background:transparent;border:1px solid var(--border-color);color:var(--text-muted);padding:6px 12px;border-radius:6px;font-size:13px;text-decoration:none}.lang-btn.active{background:var(--accent-blue);border-color:var(--accent-blue);color:white}.mobile-menu-btn{display:none;background:none;border:none;color:var(--text-primary);font-size:28px;cursor:pointer}@media(max-width:768px){.nav-links,.nav-cta,.lang-switcher{display:none}.mobile-menu-btn{display:block}}.article-header{padding:160px 0 60px;text-align:center}.breadcrumbs{display:flex;justify-content:center;gap:8px;margin-bottom:24px;font-size:14px}.breadcrumbs a{color:var(--text-muted);text-decoration:none}.article-category{display:inline-block;background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.3);color:var(--accent-blue);padding:6px 16px;border-radius:20px;font-size:13px;margin-bottom:24px}.article-title{font-size:clamp(32px,5vw,48px);font-weight:700;margin-bottom:24px;line-height:1.2}.article-meta{display:flex;justify-content:center;gap:24px;color:var(--text-muted);font-size:14px}.article-content{padding:60px 0 120px}.article-content h2{font-size:28px;font-weight:700;margin:48px 0 24px}.article-content h3{font-size:22px;font-weight:600;margin:36px 0 16px}.article-content p{font-size:17px;line-height:1.8;color:var(--text-secondary);margin-bottom:24px}.article-content ul,.article-content ol{margin:24px 0;padding-left:24px}.article-content li{font-size:17px;line-height:1.8;color:var(--text-secondary);margin-bottom:12px}.article-content strong{color:var(--text-primary)}.highlight-box{background:rgba(59,130,246,0.1);border-left:4px solid var(--accent-blue);padding:24px;margin:32px 0;border-radius:0 8px 8px 0}.highlight-box p{margin:0;color:var(--text-primary)}.tech-stack{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin:32px 0}.tech-item{background:var(--bg-card);border:1px solid var(--border-color);border-radius:12px;padding:20px;text-align:center}.tech-item-icon{font-size:32px;margin-bottom:12px}.tech-item-name{font-weight:600;margin-bottom:4px}.tech-item-desc{font-size:13px;color:var(--text-muted)}.author-box{display:flex;gap:24px;align-items:center;background:var(--bg-card);border:1px solid var(--border-color);border-radius:16px;padding:32px;margin-top:60px}.author-avatar{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--accent-blue),#8b5cf6);display:flex;align-items:center;justify-content:center;font-size:32px;flex-shrink:0}.author-info h4{font-size:18px;margin-bottom:8px}.author-info p{font-size:14px;color:var(--text-muted);margin:0}.related-posts{padding:60px 0;border-top:1px solid var(--border-color)}.related-title{font-size:24px;font-weight:700;margin-bottom:32px;text-align:center}.related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}@media(max-width:600px){.related-grid{grid-template-columns:1fr}}.related-card{background:var(--bg-card);border:1px solid var(--border-color);border-radius:12px;padding:24px;text-decoration:none;transition:transform 0.3s}.related-card:hover{transform:translateY(-4px)}.related-card h3{font-size:16px;color:var(--text-primary);margin-bottom:8px}.related-card p{font-size:14px;color:var(--text-muted);margin:0}footer{padding:40px 0;border-top:1px solid var(--border-color)}.footer-container{max-width:1100px;margin:0 auto;padding:0 24px}.footer-content{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px}.footer-text{color:var(--text-muted);font-size:14px}.footer-links{display:flex;gap:32px}.footer-links a{color:var(--text-muted);text-decoration:none;font-size:14px}
+  </style>
+</head>
+<body>
+  <div class="edge-glow edge-glow-left"></div>
+  <div class="edge-glow edge-glow-right"></div>
+  <nav>
+    <div class="nav-container nav-content">
+      <a href="../" class="logo"><img src="../../logo.png" alt="FP Logo"></a>
+      <ul class="nav-links">
+        <li><a href="../#about">About</a></li>
+        <li><a href="../#projects">Projects</a></li>
+        <li><a href="./" class="active">Blog</a></li>
+        <li><a href="../#contact">Contact</a></li>
+      </ul>
+      <a href="../#contact" class="nav-cta">Get in Touch</a>
+      <div class="lang-switcher">
+        <a href="../../blog/mobil-uygulama-gelistirme-sureci.html" class="lang-btn">TR</a>
+        <span class="lang-btn active">EN</span>
+      </div>
+      <button class="mobile-menu-btn">☰</button>
+    </div>
+  </nav>
+  <article>
+    <header class="article-header">
+      <div class="container">
+        <nav class="breadcrumbs"><a href="../">Home</a><span>›</span><a href="./">Blog</a><span>›</span><span>Mobile Development</span></nav>
+        <span class="article-category">Technology</span>
+        <h1 class="article-title">Mobile App Development Process: KelimEZ Experience</h1>
+        <div class="article-meta">
+          <span>📝 Faruk Patır</span>
+          <span>📅 December 18, 2024</span>
+          <span>⏱️ 10 min read</span>
+        </div>
+      </div>
+    </header>
+    <div class="article-content">
+      <div class="container">
+        <p>As a teacher, I've observed the challenges my students face for years. One of the biggest issues was <strong>maintaining vocabulary learning motivation</strong>. To solve this problem, I decided to develop my own mobile app called KelimEZ.</p>
+
+        <h2>Why I Built My Own App</h2>
+        <p>There are many vocabulary learning apps on the market. However, finding one designed for Turkish learners that effectively uses <strong>gamification</strong> elements and is user-friendly was difficult.</p>
+        
+        <div class="highlight-box">
+          <p>💡 <strong>Key Lesson:</strong> Before starting an app idea, question whether it solves a real problem. I observed this problem for years — so my motivation never faded.</p>
+        </div>
+
+        <h2>Technology Choice: Why Flutter?</h2>
+        <p>I chose Flutter because:</p>
+        <ul>
+          <li><strong>Single codebase:</strong> Build both iOS and Android apps with the same code</li>
+          <li><strong>Hot Reload:</strong> See changes instantly when you modify code</li>
+          <li><strong>Performance:</strong> Near-native performance</li>
+          <li><strong>Rich widget library:</strong> Rapid prototyping with ready components</li>
+        </ul>
+
+        <h3>Technologies I Used in KelimEZ</h3>
+        <div class="tech-stack">
+          <div class="tech-item"><div class="tech-item-icon">📱</div><div class="tech-item-name">Flutter</div><div class="tech-item-desc">Cross-platform</div></div>
+          <div class="tech-item"><div class="tech-item-icon">🔥</div><div class="tech-item-name">Firebase</div><div class="tech-item-desc">Backend & Auth</div></div>
+          <div class="tech-item"><div class="tech-item-icon">💾</div><div class="tech-item-name">Hive</div><div class="tech-item-desc">Local database</div></div>
+          <div class="tech-item"><div class="tech-item-icon">🎯</div><div class="tech-item-name">Provider</div><div class="tech-item-desc">State management</div></div>
+        </div>
+
+        <h2>Development Process</h2>
+        <h3>1. Planning and Design</h3>
+        <p>Before writing code, I clearly defined what the app would do:</p>
+        <ul>
+          <li>Flashcard system</li>
+          <li>Spaced repetition algorithm</li>
+          <li>Daily reminders and streak system</li>
+          <li>Gamification elements (badges, levels, points)</li>
+        </ul>
+
+        <h3>2. MVP (Minimum Viable Product)</h3>
+        <p>Instead of trying to do everything at once, I released a version with only the <strong>most essential features</strong>. This allowed me to test quickly and get real user feedback.</p>
+        
+        <div class="highlight-box">
+          <p>🚀 <strong>MVP Principle:</strong> If your first version isn't embarrassing, you've launched too late.</p>
+        </div>
+
+        <h2>Publishing to App Stores</h2>
+        <h3>Apple App Store</h3>
+        <ul>
+          <li>Apple Developer account: $99/year</li>
+          <li>Privacy policy required</li>
+          <li>Review process: 1-3 days</li>
+        </ul>
+        
+        <h3>Google Play Store</h3>
+        <ul>
+          <li>Google Play Console: One-time $25</li>
+          <li>AAB format upload</li>
+          <li>Content rating questionnaire</li>
+        </ul>
+
+        <h2>Key Lessons Learned</h2>
+        <ol>
+          <li><strong>Start small:</strong> Begin with MVP</li>
+          <li><strong>User feedback is gold:</strong> Act on real data, not assumptions</li>
+          <li><strong>Consistency matters:</strong> A little work daily beats occasional sprints</li>
+          <li><strong>Write documentation:</strong> You might not understand your own code after 3 months</li>
+        </ol>
+
+        <div class="highlight-box">
+          <p>📱 <strong>Try KelimEZ:</strong> <a href="https://apps.apple.com/tr/app/kelimez/id6756261733" target="_blank" style="color:var(--accent-blue)">Download from App Store</a></p>
+        </div>
+
+        <h2>Conclusion</h2>
+        <p>Building a mobile app from scratch is challenging but incredibly rewarding. If you have an idea, <strong>start today</strong>. It doesn't have to be perfect — you just have to start.</p>
+
+        <div class="author-box">
+          <div class="author-avatar">👨‍💻</div>
+          <div class="author-info">
+            <h4>Faruk Patır</h4>
+            <p>English teacher and creator of the KelimEZ app.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+  <section class="related-posts">
+    <div class="container">
+      <h2 class="related-title">Other Articles</h2>
+      <div class="related-grid">
+        <a href="effective-ways-to-learn-english.html" class="related-card"><h3>📚 Effective Ways to Learn English</h3><p>Learning techniques from 8 years of experience...</p></a>
+        <a href="what-is-health-tourism.html" class="related-card"><h3>🌍 What is Health Tourism?</h3><p>Turkey's rise in health tourism...</p></a>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-container footer-content">
+      <div class="footer-text">© <span id="year"></span> Faruk PATIR</div>
+      <div class="footer-links"><a href="../#about">About</a><a href="./">Blog</a><a href="../#contact">Contact</a></div>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
