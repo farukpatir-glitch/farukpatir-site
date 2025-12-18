@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Faruk Patır — Yakında</title>
+  <meta name="description" content="Faruk Patır — Yakında. Yeni projeler ve güncellemeler için takipte kalın." />
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body{
+      margin:0;
+      min-height:100vh;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      display:grid;
+      place-items:center;
+      background:
+        radial-gradient(900px 500px at 20% 20%, rgba(59,130,246,.25), transparent 60%),
+        radial-gradient(700px 500px at 80% 30%, rgba(16,185,129,.22), transparent 60%),
+        radial-gradient(800px 600px at 50% 90%, rgba(168,85,247,.18), transparent 60%),
+        #0b1020;
+      color:#e5e7eb;
+      padding: 24px;
+    }
+    .card{
+      width:min(860px, 100%);
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      backdrop-filter: blur(10px);
+      border-radius: 22px;
+      padding: 34px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.45);
+      position:relative;
+      overflow:hidden;
+    }
+    .glow{
+      position:absolute; inset:-2px;
+      background: linear-gradient(120deg, rgba(59,130,246,.25), rgba(16,185,129,.18), rgba(168,85,247,.20));
+      filter: blur(22px);
+      opacity:.35;
+      z-index:0;
+    }
+    .content{ position:relative; z-index:1; }
+    .top{
+      display:flex; align-items:center; justify-content:space-between; gap:16px;
+      flex-wrap:wrap;
+      margin-bottom: 26px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+      color: rgba(229,231,235,.9);
+      font-size: 14px;
+    }
+    .dot{
+      width:10px;height:10px;border-radius:999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 6px rgba(34,197,94,.14);
+    }
+    .pill{
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+      padding: 10px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      color: rgba(229,231,235,.85);
+    }
+    h1{
+      margin:0 0 10px;
+      font-size: clamp(34px, 6vw, 56px);
+      letter-spacing:-0.03em;
+      line-height: 1.02;
+    }
+    p{
+      margin:0 0 22px;
+      font-size: 16px;
+      color: rgba(229,231,235,.78);
+      line-height: 1.6;
+      max-width: 62ch;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 18px;
+      margin-top: 18px;
+    }
+    @media (max-width: 820px){
+      .grid{ grid-template-columns: 1fr; }
+    }
+    .panel{
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.18);
+      border-radius: 18px;
+      padding: 16px;
+    }
+    .panel h3{
+      margin:0 0 10px;
+      font-size: 14px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color: rgba(229,231,235,.86);
+    }
+    .list{
+      margin:0; padding:0; list-style:none;
+      display:grid; gap:10px;
+    }
+    .list li{
+      display:flex; gap:10px; align-items:flex-start;
+      color: rgba(229,231,235,.75);
+      font-size: 14px;
+    }
+    .check{
+      width:18px; height:18px; border-radius: 6px;
+      border:1px solid rgba(34,197,94,.5);
+      background: rgba(34,197,94,.12);
+      display:grid; place-items:center;
+      flex: 0 0 auto;
+      margin-top: 2px;
+    }
+    .check:before{
+      content:"✓";
+      font-size: 12px;
+      color:#22c55e;
+    }
+    .actions{
+      display:flex; gap:10px; flex-wrap:wrap;
+      margin-top: 18px;
+    }
+    a.btn{
+      text-decoration:none;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.08);
+      color:#e5e7eb;
+      padding: 12px 14px;
+      border-radius: 14px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: transform .08s ease, background .2s ease;
+      display:inline-flex; align-items:center; gap:10px;
+    }
+    a.btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,.12); }
+    .small{
+      font-size:12px;
+      color: rgba(229,231,235,.58);
+      margin-top: 18px;
+    }
+    .mono{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="glow"></div>
+    <div class="content">
+      <div class="top">
+        <div class="brand"><span class="dot"></span> FARUK PATIR</div>
+        <div class="pill">Yeni site hazırlanıyor • <span class="mono">farukpatir.com</span></div>
+      </div>
+
+      <h1>Yakında.</h1>
+      <p>
+        Bu alan adı aktif. Şu an yeni web sitemin son dokunuşlarını yapıyorum.
+        Çok yakında burada güncel projeler, içerikler ve iletişim kanalları olacak.
+      </p>
+
+      <div class="grid">
+        <div class="panel">
+          <h3>Yakında burada</h3>
+          <ul class="list">
+            <li><span class="check"></span> Projeler & uygulamalar (App/Play Store linkleri)</li>
+            <li><span class="check"></span> Eğitim ve içerikler</li>
+            <li><span class="check"></span> İletişim ve işbirliği</li>
+          </ul>
+          <div class="actions">
+            <!-- Buraya istersen kendi linklerini koyarız -->
+            <a class="btn" href="mailto:info@farukpatir.com">📩 Mail: info@farukpatir.com</a>
+            <a class="btn" href="https://github.com/" target="_blank" rel="noreferrer">💻 GitHub</a>
+          </div>
+          <div class="small">Not: info@ maili henüz kurulu değilse şu an çalışmayabilir; mail servisini birazdan kurarız.</div>
+        </div>
+
+        <div class="panel">
+          <h3>Durum</h3>
+          <ul class="list">
+            <li><span class="check"></span> Domain: aktif</li>
+            <li><span class="check"></span> DNS: Cloudflare’a taşınıyor</li>
+            <li><span class="check"></span> SSL (🔒): otomatik aktif olacak</li>
+          </ul>
+          <div class="small">
+            Eğer hâlâ GoDaddy sayfasını görüyorsan bu, DNS yayılım sürecidir.
+            Genelde 10–60 dk içinde düzelir.
+          </div>
+        </div>
+      </div>
+
+      <div class="small">© <span id="y"></span> Faruk Patır</div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
