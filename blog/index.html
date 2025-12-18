@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog | Faruk PATIR — İngilizce, Teknoloji ve Sağlık Turizmi Yazıları</title>
+    <meta name="description"
+        content="İngilizce öğrenme teknikleri, mobil uygulama geliştirme deneyimleri ve sağlık turizmi hakkında yazılar. Faruk Patır'ın blog sayfası." />
+    <meta name="keywords"
+        content="ingilizce öğrenme, mobil uygulama geliştirme, flutter, sağlık turizmi, kelimez, faruk patır blog" />
+    <meta name="author" content="Faruk Patır" />
+    <link rel="canonical" href="https://farukpatir.com/blog/" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Blog | Faruk PATIR" />
+    <meta property="og:description"
+        content="İngilizce öğrenme teknikleri, mobil uygulama geliştirme deneyimleri ve sağlık turizmi hakkında yazılar." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://farukpatir.com/blog/" />
+    <meta property="og:site_name" content="Faruk PATIR" />
+    <meta property="og:locale" content="tr_TR" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Blog | Faruk PATIR" />
+    <meta name="twitter:description"
+        content="İngilizce öğrenme teknikleri, mobil uygulama geliştirme deneyimleri ve sağlık turizmi hakkında yazılar." />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Schema.org Blog -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Faruk PATIR Blog",
+    "description": "İngilizce öğrenme teknikleri, mobil uygulama geliştirme deneyimleri ve sağlık turizmi hakkında yazılar.",
+    "url": "https://farukpatir.com/blog/",
+    "author": {
+      "@type": "Person",
+      "name": "Faruk Patır",
+      "url": "https://farukpatir.com"
+    },
+    "blogPost": [
+      {
+        "@type": "BlogPosting",
+        "headline": "İngilizce Öğrenmenin En Etkili Yolları",
+        "url": "https://farukpatir.com/blog/ingilizce-ogrenmenin-etkili-yollari.html"
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Mobil Uygulama Geliştirme Süreci: KelimEZ Deneyimi",
+        "url": "https://farukpatir.com/blog/mobil-uygulama-gelistirme-sureci.html"
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Sağlık Turizmi Nedir? Türkiye'nin Yükselişi",
+        "url": "https://farukpatir.com/blog/saglik-turizmi-nedir.html"
+      }
+    ]
+  }
+  </script>
+
+    <style>
+        :root {
+            --bg-primary: #000000;
+            --bg-secondary: #0a0a0a;
+            --bg-card: rgba(255, 255, 255, 0.02);
+            --border-color: rgba(255, 255, 255, 0.1);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.7);
+            --text-muted: rgba(255, 255, 255, 0.5);
+            --accent-blue: #3b82f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Blue Edge Glow Effects */
+        .edge-glow {
+            position: fixed;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .edge-glow-left {
+            top: 0;
+            left: 0;
+            width: 120px;
+            height: 100%;
+            background: linear-gradient(to right, rgba(59, 130, 246, 0.4), transparent);
+            animation: pulseGlow 5s ease-in-out infinite;
+        }
+
+        .edge-glow-right {
+            top: 0;
+            right: 0;
+            width: 120px;
+            height: 100%;
+            background: linear-gradient(to left, rgba(59, 130, 246, 0.4), transparent);
+            animation: pulseGlow 5s ease-in-out infinite;
+        }
+
+        @keyframes pulseGlow {
+
+            0%,
+            100% {
+                opacity: 0.4;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 16px 0;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 48px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--text-primary);
+        }
+
+        .nav-cta {
+            background: var(--text-primary);
+            color: var(--bg-primary);
+            padding: 10px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 28px;
+            cursor: pointer;
+            padding: 8px;
+            z-index: 1001;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.98);
+            z-index: 999;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+
+        .mobile-menu.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        @media (max-width: 768px) {
+
+            .nav-links,
+            .nav-cta {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+        }
+
+        /* Page Header */
+        .page-header {
+            padding: 160px 0 80px;
+            text-align: center;
+            position: relative;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, rgba(59, 130, 246, 0.1), transparent 50%);
+            z-index: -1;
+        }
+
+        /* Breadcrumbs */
+        .breadcrumbs {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 24px;
+            font-size: 14px;
+        }
+
+        .breadcrumbs a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .breadcrumbs a:hover {
+            color: var(--accent-blue);
+        }
+
+        .breadcrumbs span {
+            color: var(--text-muted);
+        }
+
+        .breadcrumbs .current {
+            color: var(--text-secondary);
+        }
+
+        .page-title {
+            font-size: clamp(36px, 6vw, 56px);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: 16px;
+        }
+
+        .page-description {
+            font-size: 18px;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Blog Grid */
+        .blog-section {
+            padding: 80px 0 120px;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        @media (max-width: 900px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .blog-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: transform 0.4s, border-color 0.4s, box-shadow 0.4s;
+            text-decoration: none;
+            display: block;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(59, 130, 246, 0.4);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+        }
+
+        .blog-card-image {
+            height: 200px;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 64px;
+        }
+
+        .blog-card-content {
+            padding: 28px;
+        }
+
+        .blog-card-meta {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 16px;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .blog-card-category {
+            color: var(--accent-blue);
+            font-weight: 500;
+        }
+
+        .blog-card h2 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            line-height: 1.4;
+            color: var(--text-primary);
+        }
+
+        .blog-card p {
+            color: var(--text-muted);
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .blog-card-link {
+            color: var(--accent-blue);
+            font-size: 14px;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: gap 0.3s;
+        }
+
+        .blog-card:hover .blog-card-link {
+            gap: 10px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-text {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 32px;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-blue);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Blue Edge Glow Effects -->
+    <div class="edge-glow edge-glow-left"></div>
+    <div class="edge-glow edge-glow-right"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="../index.html" onclick="closeMobileMenu()">Ana Sayfa</a>
+        <a href="../index.html#hakkimda" onclick="closeMobileMenu()">Hakkımda</a>
+        <a href="../index.html#projeler" onclick="closeMobileMenu()">Projeler</a>
+        <a href="./" onclick="closeMobileMenu()">Blog</a>
+        <a href="../index.html#iletisim" onclick="closeMobileMenu()">İletişim</a>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-content">
+            <a href="../index.html" class="logo">
+                <img src="../logo.png" alt="FP Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html#hakkimda">Hakkımda</a></li>
+                <li><a href="../index.html#uzmanlik">Uzmanlık</a></li>
+                <li><a href="../index.html#projeler">Projeler</a></li>
+                <li><a href="./" class="active">Blog</a></li>
+                <li><a href="../index.html#iletisim">İletişim</a></li>
+            </ul>
+            <a href="../index.html#iletisim" class="nav-cta">İletişime Geç</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" onclick="toggleMobileMenu()">☰</button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <a href="../index.html">Ana Sayfa</a>
+                <span>›</span>
+                <span class="current">Blog</span>
+            </nav>
+            <h1 class="page-title">Yazılar & İçerikler</h1>
+            <p class="page-description">
+                İngilizce öğrenme, teknoloji ve sağlık turizmi üzerine deneyimlerimi ve öğrendiklerimi paylaşıyorum.
+            </p>
+        </div>
+    </header>
+
+    <!-- Blog Section -->
+    <main class="blog-section">
+        <div class="container">
+            <div class="blog-grid">
+
+                <a href="ingilizce-ogrenmenin-etkili-yollari.html" class="blog-card">
+                    <div class="blog-card-image">📚</div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span class="blog-card-category">Eğitim</span>
+                            <span>18 Aralık 2024</span>
+                            <span>8 dk okuma</span>
+                        </div>
+                        <h2>İngilizce Öğrenmenin En Etkili Yolları</h2>
+                        <p>8 yıllık öğretmenlik deneyimimden edindiğim en etkili İngilizce öğrenme teknikleri ve
+                            stratejileri.</p>
+                        <span class="blog-card-link">Devamını Oku →</span>
+                    </div>
+                </a>
+
+                <a href="mobil-uygulama-gelistirme-sureci.html" class="blog-card">
+                    <div class="blog-card-image">💡</div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span class="blog-card-category">Teknoloji</span>
+                            <span>18 Aralık 2024</span>
+                            <span>10 dk okuma</span>
+                        </div>
+                        <h2>Mobil Uygulama Geliştirme Süreci: KelimEZ Deneyimi</h2>
+                        <p>KelimEZ uygulamasını geliştirirken yaşadığım deneyimler, öğrendiklerim ve Flutter ile
+                            uygulama yapma süreci.</p>
+                        <span class="blog-card-link">Devamını Oku →</span>
+                    </div>
+                </a>
+
+                <a href="saglik-turizmi-nedir.html" class="blog-card">
+                    <div class="blog-card-image">🌍</div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span class="blog-card-category">Sağlık</span>
+                            <span>18 Aralık 2024</span>
+                            <span>7 dk okuma</span>
+                        </div>
+                        <h2>Sağlık Turizmi Nedir? Türkiye'nin Yükselişi</h2>
+                        <p>Türkiye'nin sağlık turizmindeki konumu, avantajları ve bu alandaki global vizyonu hakkında
+                            detaylı bir inceleme.</p>
+                        <span class="blog-card-link">Devamını Oku →</span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-text">
+                © <span id="year"></span> Faruk PATIR
+            </div>
+            <div class="footer-links">
+                <a href="../index.html#hakkimda">Hakkımda</a>
+                <a href="../index.html#projeler">Projeler</a>
+                <a href="./">Blog</a>
+                <a href="../index.html#iletisim">İletişim</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('active');
+            mobileMenuBtn.textContent = mobileMenu.classList.contains('active') ? '✕' : '☰';
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('active');
+            mobileMenuBtn.textContent = '☰';
+        }
+    </script>
+</body>
+
+</html>

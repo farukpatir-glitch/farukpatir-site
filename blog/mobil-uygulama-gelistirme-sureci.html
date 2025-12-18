@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mobil Uygulama Geliştirme Süreci: KelimEZ Deneyimi | Faruk PATIR</title>
+  <meta name="description" content="KelimEZ mobil uygulamasını sıfırdan geliştirme sürecim. Flutter ile uygulama yapma, App Store ve Google Play yayınlama deneyimlerim." />
+  <meta name="keywords" content="mobil uygulama geliştirme, flutter, kelimez, uygulama yapma, app store, google play" />
+  <meta name="author" content="Faruk Patır" />
+  <link rel="canonical" href="https://farukpatir.com/blog/mobil-uygulama-gelistirme-sureci.html" />
+  <meta property="og:title" content="Mobil Uygulama Geliştirme Süreci: KelimEZ Deneyimi" />
+  <meta property="og:description" content="KelimEZ mobil uygulamasını sıfırdan geliştirme sürecim." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://farukpatir.com/blog/mobil-uygulama-gelistirme-sureci.html" />
+  <meta property="article:published_time" content="2024-12-18" />
+  <meta property="article:author" content="Faruk Patır" />
+  <link rel="icon" type="image/png" href="../logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"Mobil Uygulama Geliştirme Süreci: KelimEZ Deneyimi","author":{"@type":"Person","name":"Faruk Patır"},"datePublished":"2024-12-18","articleSection":"Teknoloji"}
+  </script>
+  <style>
+    :root{--bg-primary:#000;--bg-card:rgba(255,255,255,0.02);--border-color:rgba(255,255,255,0.1);--text-primary:#fff;--text-secondary:rgba(255,255,255,0.7);--text-muted:rgba(255,255,255,0.5);--accent-blue:#3b82f6}*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:var(--bg-primary);color:var(--text-primary);line-height:1.6}.edge-glow{position:fixed;pointer-events:none;z-index:0}.edge-glow-left{top:0;left:0;width:120px;height:100%;background:linear-gradient(to right,rgba(59,130,246,0.4),transparent);animation:pulseGlow 5s ease-in-out infinite}.edge-glow-right{top:0;right:0;width:120px;height:100%;background:linear-gradient(to left,rgba(59,130,246,0.4),transparent);animation:pulseGlow 5s ease-in-out infinite}@keyframes pulseGlow{0%,100%{opacity:0.4}50%{opacity:1}}.container{max-width:800px;margin:0 auto;padding:0 24px}nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:16px 0;background:rgba(0,0,0,0.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--border-color)}.nav-container{max-width:1100px;margin:0 auto;padding:0 24px}.nav-content{display:flex;justify-content:space-between;align-items:center}.logo{text-decoration:none}.logo img{height:48px}.nav-links{display:flex;gap:40px;list-style:none}.nav-links a{color:var(--text-muted);text-decoration:none;font-size:14px;transition:color 0.3s}.nav-links a:hover,.nav-links a.active{color:var(--text-primary)}.nav-cta{background:var(--text-primary);color:var(--bg-primary);padding:10px 24px;border-radius:6px;text-decoration:none;font-size:14px;font-weight:600}.mobile-menu-btn{display:none;background:none;border:none;color:var(--text-primary);font-size:28px;cursor:pointer}.mobile-menu{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.98);z-index:999;flex-direction:column;justify-content:center;align-items:center;gap:32px;opacity:0;visibility:hidden}.mobile-menu.active{opacity:1;visibility:visible}.mobile-menu a{color:var(--text-primary);text-decoration:none;font-size:24px}@media(max-width:768px){.nav-links,.nav-cta{display:none}.mobile-menu-btn{display:block}.mobile-menu{display:flex}}.article-header{padding:160px 0 60px;text-align:center}.breadcrumbs{display:flex;justify-content:center;gap:8px;margin-bottom:24px;font-size:14px}.breadcrumbs a{color:var(--text-muted);text-decoration:none}.breadcrumbs a:hover{color:var(--accent-blue)}.article-category{display:inline-block;background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.3);color:var(--accent-blue);padding:6px 16px;border-radius:20px;font-size:13px;margin-bottom:24px}.article-title{font-size:clamp(32px,5vw,48px);font-weight:700;margin-bottom:24px;line-height:1.2}.article-meta{display:flex;justify-content:center;gap:24px;color:var(--text-muted);font-size:14px;flex-wrap:wrap}.article-content{padding:60px 0 120px}.article-content h2{font-size:28px;font-weight:700;margin:48px 0 24px}.article-content h3{font-size:22px;font-weight:600;margin:36px 0 16px}.article-content p{font-size:17px;line-height:1.8;color:var(--text-secondary);margin-bottom:24px}.article-content ul,.article-content ol{margin:24px 0;padding-left:24px}.article-content li{font-size:17px;line-height:1.8;color:var(--text-secondary);margin-bottom:12px}.article-content strong{color:var(--text-primary)}.highlight-box{background:rgba(59,130,246,0.1);border-left:4px solid var(--accent-blue);padding:24px;margin:32px 0;border-radius:0 8px 8px 0}.highlight-box p{margin:0;color:var(--text-primary)}.tech-stack{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:32px 0}.tech-item{background:var(--bg-card);border:1px solid var(--border-color);border-radius:12px;padding:20px;text-align:center}.tech-item-icon{font-size:32px;margin-bottom:12px}.tech-item-name{font-weight:600;margin-bottom:4px}.tech-item-desc{font-size:13px;color:var(--text-muted)}.author-box{display:flex;gap:24px;align-items:center;background:var(--bg-card);border:1px solid var(--border-color);border-radius:16px;padding:32px;margin-top:60px}.author-avatar{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--accent-blue),#8b5cf6);display:flex;align-items:center;justify-content:center;font-size:32px;flex-shrink:0}.author-info h4{font-size:18px;font-weight:600;margin-bottom:8px}.author-info p{font-size:14px;color:var(--text-muted);margin:0}.related-posts{padding:60px 0;border-top:1px solid var(--border-color)}.related-title{font-size:24px;font-weight:700;margin-bottom:32px;text-align:center}.related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}@media(max-width:600px){.related-grid{grid-template-columns:1fr}}.related-card{background:var(--bg-card);border:1px solid var(--border-color);border-radius:12px;padding:24px;text-decoration:none;transition:transform 0.3s}.related-card:hover{transform:translateY(-4px);border-color:rgba(59,130,246,0.4)}.related-card h3{font-size:16px;font-weight:600;color:var(--text-primary);margin-bottom:8px}.related-card p{font-size:14px;color:var(--text-muted);margin:0}footer{padding:40px 0;border-top:1px solid var(--border-color)}.footer-container{max-width:1100px;margin:0 auto;padding:0 24px}.footer-content{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px}.footer-text{color:var(--text-muted);font-size:14px}.footer-links{display:flex;gap:32px}.footer-links a{color:var(--text-muted);text-decoration:none;font-size:14px}.footer-links a:hover{color:var(--accent-blue)}
+  </style>
+</head>
+<body>
+  <div class="edge-glow edge-glow-left"></div>
+  <div class="edge-glow edge-glow-right"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="../index.html">Ana Sayfa</a>
+    <a href="./">Blog</a>
+    <a href="../index.html#iletisim">İletişim</a>
+  </div>
+  <nav>
+    <div class="nav-container nav-content">
+      <a href="../index.html" class="logo"><img src="../logo.png" alt="FP Logo"></a>
+      <ul class="nav-links">
+        <li><a href="../index.html#hakkimda">Hakkımda</a></li>
+        <li><a href="../index.html#projeler">Projeler</a></li>
+        <li><a href="./" class="active">Blog</a></li>
+        <li><a href="../index.html#iletisim">İletişim</a></li>
+      </ul>
+      <a href="../index.html#iletisim" class="nav-cta">İletişime Geç</a>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" onclick="toggleMobileMenu()">☰</button>
+    </div>
+  </nav>
+  <article>
+    <header class="article-header">
+      <div class="container">
+        <nav class="breadcrumbs"><a href="../index.html">Ana Sayfa</a><span>›</span><a href="./">Blog</a><span>›</span><span>Mobil Uygulama</span></nav>
+        <span class="article-category">Teknoloji</span>
+        <h1 class="article-title">Mobil Uygulama Geliştirme Süreci: KelimEZ Deneyimi</h1>
+        <div class="article-meta">
+          <span>📝 Faruk Patır</span>
+          <span>📅 18 Aralık 2024</span>
+          <span>⏱️ 10 dk okuma</span>
+        </div>
+      </div>
+    </header>
+    <div class="article-content">
+      <div class="container">
+        <p>Bir öğretmen olarak yıllarca öğrencilerimin karşılaştığı zorlukları gözlemledim. En büyük sorunlardan biri <strong>kelime öğrenme motivasyonunu sürdürmek</strong>ti. Bu sorunu çözmek için kendi mobil uygulamam olan KelimEZ'i geliştirmeye karar verdim.</p>
+        
+        <h2>Neden Kendi Uygulamamı Geliştirdim?</h2>
+        <p>Piyasada birçok kelime öğrenme uygulaması var. Ancak Türk öğrenciler için tasarlanmış, <strong>gamification</strong> öğelerini etkili kullanan ve kullanıcı dostu bir uygulama bulmak zordu. Öğretmenlik deneyimimden gelen içgörüleri uygulamaya dökmek istedim.</p>
+        
+        <div class="highlight-box">
+          <p>💡 <strong>Önemli Ders:</strong> Bir uygulama fikrine başlamadan önce, gerçek bir problemi çözüp çözmediğinizi sorgulayın.</p>
+        </div>
+
+        <h2>Teknoloji Seçimi: Neden Flutter?</h2>
+        <p>Ben Flutter'ı tercih ettim çünkü:</p>
+        <ul>
+          <li><strong>Tek kod tabanı:</strong> Aynı kodla hem iOS hem Android uygulaması</li>
+          <li><strong>Hot Reload:</strong> Kodu değiştirdiğinizde anında sonucu görme</li>
+          <li><strong>Performans:</strong> Native'e yakın performans</li>
+          <li><strong>Zengin widget kütüphanesi:</strong> Hızlı prototipleme</li>
+        </ul>
+
+        <h3>Kullandığım Teknolojiler</h3>
+        <div class="tech-stack">
+          <div class="tech-item"><div class="tech-item-icon">📱</div><div class="tech-item-name">Flutter</div><div class="tech-item-desc">Cross-platform</div></div>
+          <div class="tech-item"><div class="tech-item-icon">🔥</div><div class="tech-item-name">Firebase</div><div class="tech-item-desc">Backend & Auth</div></div>
+          <div class="tech-item"><div class="tech-item-icon">💾</div><div class="tech-item-name">Hive</div><div class="tech-item-desc">Yerel veritabanı</div></div>
+          <div class="tech-item"><div class="tech-item-icon">🎯</div><div class="tech-item-name">Provider</div><div class="tech-item-desc">State management</div></div>
+        </div>
+
+        <h2>Geliştirme Süreci</h2>
+        <h3>1. Planlama ve Tasarım</h3>
+        <p>Kod yazmaya başlamadan önce uygulamanın ne yapacağını belirledim:</p>
+        <ul>
+          <li>Kelime kartları (flashcards) sistemi</li>
+          <li>Aralıklı tekrar (spaced repetition) algoritması</li>
+          <li>Günlük hatırlatmalar ve streak sistemi</li>
+          <li>Oyunlaştırma öğeleri (rozet, seviye, puan)</li>
+        </ul>
+
+        <h3>2. MVP (Minimum Viable Product)</h3>
+        <p>Her şeyi aynı anda yapmak yerine en temel özellikleri içeren bir sürüm çıkardım. Böylece hızlıca test edebildim ve gerçek kullanıcı geri bildirimi aldım.</p>
+        
+        <div class="highlight-box">
+          <p>🚀 <strong>MVP Prensibi:</strong> İlk sürümünüz utandırıcı değilse, çok geç yayınlamışsınızdır.</p>
+        </div>
+
+        <h2>App Store ve Google Play Yayınlama</h2>
+        <h3>Apple App Store</h3>
+        <ul>
+          <li>Apple Developer hesabı: Yıllık 99$</li>
+          <li>Gizlilik politikası zorunlu</li>
+          <li>İnceleme süreci: 1-3 gün</li>
+        </ul>
+        
+        <h3>Google Play Store</h3>
+        <ul>
+          <li>Google Play Console: Tek seferlik 25$</li>
+          <li>AAB formatı ile yükleme</li>
+          <li>İçerik derecelendirme anketi</li>
+        </ul>
+
+        <h2>Öğrendiğim En Önemli Dersler</h2>
+        <ol>
+          <li><strong>Küçük başlayın:</strong> MVP ile başlayın</li>
+          <li><strong>Kullanıcı geri bildirimi altındır:</strong> Gerçek verilerle hareket edin</li>
+          <li><strong>Tutarlılık önemli:</strong> Her gün biraz çalışmak daha iyi</li>
+          <li><strong>Dokümantasyon yazın:</strong> Kodunuzu anlamak zorlaşabilir</li>
+        </ol>
+
+        <div class="highlight-box">
+          <p>📱 <strong>KelimEZ'i Deneyin:</strong> <a href="https://apps.apple.com/tr/app/kelimez/id6756261733" target="_blank" style="color:var(--accent-blue)">App Store'dan indirin</a></p>
+        </div>
+
+        <h2>Sonuç</h2>
+        <p>Sıfırdan bir mobil uygulama geliştirmek zorlu ama ödüllendirici. Bir fikriniz varsa, <strong>bugün başlayın</strong>.</p>
+
+        <div class="author-box">
+          <div class="author-avatar">👨‍💻</div>
+          <div class="author-info">
+            <h4>Faruk Patır</h4>
+            <p>İngilizce öğretmeni ve KelimEZ uygulamasının yaratıcısı.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+  <section class="related-posts">
+    <div class="container">
+      <h2 class="related-title">Diğer Yazılar</h2>
+      <div class="related-grid">
+        <a href="ingilizce-ogrenmenin-etkili-yollari.html" class="related-card"><h3>📚 İngilizce Öğrenmenin Etkili Yolları</h3><p>8 yıllık deneyimden öğrenme teknikleri...</p></a>
+        <a href="saglik-turizmi-nedir.html" class="related-card"><h3>🌍 Sağlık Turizmi Nedir?</h3><p>Türkiye'nin sağlık turizmindeki yükselişi...</p></a>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-container footer-content">
+      <div class="footer-text">© <span id="year"></span> Faruk PATIR</div>
+      <div class="footer-links">
+        <a href="../index.html#hakkimda">Hakkımda</a>
+        <a href="./">Blog</a>
+        <a href="../index.html#iletisim">İletişim</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent=new Date().getFullYear();
+    const mobileMenu=document.getElementById('mobileMenu'),mobileMenuBtn=document.getElementById('mobileMenuBtn');
+    function toggleMobileMenu(){mobileMenu.classList.toggle('active');mobileMenuBtn.textContent=mobileMenu.classList.contains('active')?'✕':'☰'}
+  </script>
+</body>
+</html>
